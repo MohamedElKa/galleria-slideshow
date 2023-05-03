@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image">
+        <div class="title">
+          <h1>Starry Night</h1>
+          <span class="name">Vincent Van Gogh</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage()" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+      </div>
+      <div class="artist">
+        <img src="./assets/starry-night/artist.jpg" alt="">
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1889</h1>
+        </div>
+        <div class="text">
+          <p>Although The Starry Night was painted during the day in Van Gogh's ground-floor 
+            studio, it would be inaccurate to state that the picture was painted from memory. 
+            The view has been identified as the one from his bedroom window, facing east, a 
+            view which Van Gogh painted variations of no fewer than twenty-one times, including 
+            The Starry Night. "Through the iron-barred window," he wrote to his brother, Theo, 
+            around 23 May 1889, "I can see an enclosed square of wheat ... above which, in the 
+            morning, I watch the sun rise in all its glory."</p>
+            <a href="https://en.wikipedia.org/wiki/The_Starry_Night" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>Starry Night</h3>
+      <span>vincent van Gogh</span>
+      <div class="spans">
+        <span></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" onclick="goToPage()" alt="">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+    let bodyyy = document.querySelector("body");
+    // console.log(bodyyy);
+    function goToPage(){
+      location.href = "./the-storm-on-the-sea-of-galilee.html";
+    }
+    function backToPage(){
+      location.href = "./the-swing.html";
+    }
+
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/starry-night/hero-large.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  
+</body>
+</html>

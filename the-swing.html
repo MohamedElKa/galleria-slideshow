@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image" style="background-image: url('./assets/the-swing/hero-small.jpg')">
+        <div class="title">
+          <h1 style="font-size: 25px; width: 100%">The Swing</h1>
+          <span class="name">Jean-Honoré Fragonard</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+      </div>
+      <div class="artist">
+        <img src="./assets/the-swing/artist.jpg" alt="">
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1767</h1>
+        </div>
+        <div class="text">
+          <p>
+            The painting depicts an elegant young woman on a swing. A smiling young man, 
+  hiding in the bushes on the left, watches her from a vantage point that allows 
+  him to see up into her billowing dress, where his arm is pointed with hat in 
+  hand. A smiling older man, who is nearly hidden in the shadows on the right, 
+  propels the swing with a pair of ropes. The older man appears to be unaware of 
+  the young man. As the young lady swings high, she throws her left leg up, 
+  allowing her dainty shoe to fly through the air.</p>
+            <a href="https://en.wikipedia.org/wiki/The_Swing_(Fragonard)" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>The Swing</h3>
+      <span>Jean-Honoré Fragonard</span>
+      <div class="spans">
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" alt="" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" alt="" onclick="goToPage()">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+    let bodyyy = document.querySelector("body");
+    function backToPage(){
+    location.href = "./the-basket-of-apples.html";
+  }
+      function goToPage(){
+      location.href = "./starry-night.html";
+    }
+    // console.log(bodyyy);
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/the-boy-in-the-red-vest/hero-small.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  <!-- Modal start -->
+  <!-- Close -->
+  <!-- Modal end -->
+  <!-- 1889 -->
+  
+
+  <!-- Go to source URL:  -->
+
+  <!-- Starry Night -->
+  <!-- Vincent Van Gogh -->
+</body>
+</html>

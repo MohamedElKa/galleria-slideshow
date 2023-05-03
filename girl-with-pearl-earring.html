@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image" style="background-image: url('./assets/girl-with-pearl-earring/hero-small.jpg')">
+        <div class="title">
+          <h1 style="font-size: 25px; width: 100%">Girl with a Pearl Earring</h1>
+          <span class="name">Johannes Vermeer</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+      </div>
+      <div class="artist">
+        <img src="./assets/girl-with-pearl-earring/artist.jpg" alt="">
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1665</h1>
+        </div>
+        <div class="text">
+          <p>
+            The painting is a tronie, the Dutch 17th-century description of a 'head' that was 
+  not meant to be a portrait. It depicts a European girl wearing an exotic dress, 
+  an oriental turban, and what was thought to be a very large pearl as an earring. 
+  In 2014, Dutch astrophysicist Vincent Icke raised doubts about the material of the 
+  earring and argued that it looks more like polished tin than pearl on the grounds 
+  of the specular reflection, the pear shape and the large size of the earring.</p>
+            <a href="https://en.wikipedia.org/wiki/Girl_with_a_Pearl_Earring" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>Girl with a Pearl Earring</h3>
+      <span>Johannes Vermeer</span>
+      <div class="spans">
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" alt="" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" alt="" onclick="goToPage()">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+      let bodyyy = document.querySelector("body");
+      function goToPage(){
+      location.href = "./the-great-wave-off-kanagawa.html";
+    }
+      function backToPage(){
+      location.href = "./the-boy-in-the-red-vest.html";
+    }
+    // console.log(bodyyy);
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/girl-with-pearl-earring/hero-small.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  <!-- Modal start -->
+  <!-- Close -->
+  <!-- Modal end -->
+  <!-- 1889 -->
+  
+
+  <!-- Go to source URL:  -->
+
+  <!-- Starry Night -->
+  <!-- Vincent Van Gogh -->
+</body>
+</html>

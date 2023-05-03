@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image" style="background-image: url('./assets/the-basket-of-apples/hero-small.jpg')">
+        <div class="title">
+          <h1 style="font-size: 25px; width: 100%">The Basket of Apples</h1>
+          <span class="name">Paul Cézanne</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+      </div>
+      <div class="artist">
+        <img src="./assets/the-basket-of-apples/artist.jpg" alt="">
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1893</h1>
+        </div>
+        <div class="text">
+          <p>
+            The Basket of Apples (French: Le panier de pommes) is a still life oil painting 
+  by French artist Paul Cézanne, which he created c. 1893. The painting is 
+  particularly remarkable for its creative composition, which rejected realistic 
+  representation in favour of distorting objects to create multiple perspectives. 
+  This approach eventually influenced other art movements, including Fauvism and 
+  Cubism. It belongs to the Helen Birch Bartlett Memorial Collection of the Art 
+  Institute of Chicago.</p>
+            <a href="https://en.wikipedia.org/wiki/The_Basket_of_Apples" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>The Basket of Apples</h3>
+      <span>Paul Cézanne</span>
+      <div class="spans">
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span></span>
+        <span style="visibility: hidden;"></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" alt="" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" alt="" onclick="goToPage()">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+    let bodyyy = document.querySelector("body");
+    function backToPage(){
+    location.href = "./the-sleeping-gypsy.html";
+  }
+      function goToPage(){
+      location.href = "./the-swing.html";
+    }
+    // console.log(bodyyy);
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/the-basket-of-apples/hero-small.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  <!-- Modal start -->
+  <!-- Close -->
+  <!-- Modal end -->
+  <!-- 1889 -->
+  
+
+  <!-- Go to source URL:  -->
+
+  <!-- Starry Night -->
+  <!-- Vincent Van Gogh -->
+</body>
+</html>

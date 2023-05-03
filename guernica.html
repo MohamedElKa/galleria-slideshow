@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image" style="background-image: url('./assets/guernica/hero-small.jpg')">
+        <div class="title">
+          <h1 style="font-size: 25px; width: 100%">Guernica</h1>
+          <span class="name">Pablo Picasso</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+      </div>
+      <div class="artist">
+        <img src="./assets/guernica/artist.jpg" alt="">
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1937</h1>
+        </div>
+        <div class="text">
+          <p>
+            The scene occurs within a room where, on the left, a wide-eyed bull stands over 
+  a grieving woman holding a dead child in her arms. In the center of the room a 
+  horse falls in agony with a large gaping hole in its side, as if it had just been 
+  run through by a spear or javelin. The horse appears to be wearing chain mail 
+  armor, decorated with vertical tally marks arranged in rows. A dead and dismembered 
+  soldier lies under the horse. The hand of his severed right arm grasps a shattered 
+  sword, from which a flower grows.</p>
+            <a href="https://en.wikipedia.org/wiki/Guernica_(Picasso)" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>Guernica</h3>
+      <span>Pablo Picasso</span>
+      <div class="spans">
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" alt="" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" alt="" onclick="goToPage()">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+    let bodyyy = document.querySelector("body");
+    function backToPage(){
+    location.href = "./arnolfini-portrait.html";
+  }
+    function goToPage(){
+      location.href = "./van-gogh-self-portrait.html";
+    }
+    // console.log(bodyyy);
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/guernica/hero-small.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  <!-- Modal start -->
+  <!-- Close -->
+  <!-- Modal end -->
+  <!-- 1889 -->
+  
+
+  <!-- Go to source URL:  -->
+
+  <!-- Starry Night -->
+  <!-- Vincent Van Gogh -->
+</body>
+</html>
