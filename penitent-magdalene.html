@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./Header.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Penitent Magdalene</title>
+</head>
+<body id="body">
+  <div class="header">
+    <h1>galleria.</h1>
+    <a class="start"  href="./index.html">STOP SLIDESHOW</a>
+  </div>
+  <div class="container">
+    <div class="images">
+      <div class="image" style="background-image: url('./assets/penitent-magdalene/hero-small.jpg')">
+        <div class="title">
+          <h1>Penitent Magdalene</h1>
+          <span class="name">Artemisia Gentileschi</span>
+        </div>
+        <div class="view">
+          <button onclick="viewImage()">
+            <img src="./assets/shared/icon-view-image.svg" onclick="viewImage" alt="">
+            VIEW IMAGE
+          </button>
+        </div>
+        <div class="artist">
+          <img src="./assets/penitent-magdalene/artist.jpg" alt="">
+        </div>
+      </div>
+      </div>
+      <div class="infos">
+        <div class="year">
+          <h1>1625</h1>
+        </div>
+        <div class="text">
+          <p>
+            Penitent Magdalene is a painting by the Italian artist Artemisia Gentileschi. 
+  It hangs in Seville Cathedral. It has probably been in the cathedral since the 
+  late 17th century. The painting's first home was the collection of Fernando 
+  Enriquez Afan de Ribera, from 1626 to 1637. She returned to the subject later 
+  in the 1620s in Mary Magdalene as Melancholy.</p>
+            <a href="https://en.wikipedia.org/wiki/Penitent_Magdalene_(Artemisia_Gentileschi)" target="_blank">GO TO SOURCE</a>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <div class="text">
+      <h3>Penitent Magdalene</h3>
+      <span>Artemisia Gentileschi</span>
+      <div class="spans">
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+        <span style="visibility: hidden;"></span>
+      </div>
+    </div>
+    <div class="play">
+      <img src="./assets/shared/icon-back-button.svg" style="cursor: pointer;" alt="" onclick="backToPage()">
+      <img src="./assets/shared/icon-next-button.svg" style="cursor: pointer;" alt="" onclick="goToPage()">
+    </div>
+  </footer>
+  <!-- View image -->
+  <script>
+    let bodyyy = document.querySelector("body");
+    function backToPage(){
+    location.href = "./mona-lisa.html";
+  }
+      function goToPage(){
+      location.href = "./the-sleeping-gypsy.html";
+    }
+    // console.log(bodyyy);
+    function viewImage(){
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      let layer = document.createElement("div");
+      let cross = document.createElement("img");
+      div.className = "newDiv";
+      img.className = "newImg";
+      layer.className = "newLayer";
+      cross.className = "newCross";
+      img.setAttribute("src", "./assets/penitent-magdalene/hero-small.jpg")
+      cross.setAttribute("src", "./assets/x-symbol-svgrepo-com.svg")
+      cross.onclick = () =>{
+        div.remove();
+        // console.log("wdd")
+      };
+      div.appendChild(img);
+      div.appendChild(layer);
+      div.appendChild(cross);
+      bodyyy.appendChild(div);
+    }
+  </script>
+  <!-- Modal start -->
+  <!-- Close -->
+  <!-- Modal end -->
+  <!-- 1889 -->
+  
+
+  <!-- Go to source URL:  -->
+
+  <!-- Starry Night -->
+  <!-- Vincent Van Gogh -->
+</body>
+</html>
